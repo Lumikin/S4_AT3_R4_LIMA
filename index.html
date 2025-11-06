@@ -28,20 +28,22 @@
             <label for="cidade">
                 Cidade:
                 <input required type="text" name="cidade" id="cidade" placeholder="São Paulo"
-                    pattern="^[a-zA-ZÀ-ÿ\s]{2,}$" maxlength="50">
+                    pattern="^[a-zA-ZÀ-\s]{2,}$" maxlength="50"> <!-- Esse rejex pega o minimo de 2 palavras -->
             </label>
             <br><br>
             <label for="email">
                 E-mail:
                 <input required type="email" name="email" id="email" placeholder="seuemail@dominio.com"
                     pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" maxlength="100">
+                <!-- O rejex ele espera o @ e o . do email -->
             </label>
             <br><br>
 
             <label for="telefone">
                 Telefone:
                 <input required type="tel" name="telefone" id="telefone" placeholder="(11) 99999-9999"
-                    pattern="^(?:\$\d{2}\$\s?)?\d{4,5}-?\d{4}$" maxlength="15">
+                    pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" maxlength="15">
+                <!-- O rejex espera numeros, parenteses e exige o DDD   -->
             </label>
             <br><br>
 
@@ -93,7 +95,7 @@
             <br><br>
 
             <fieldset>
-                <legend>Topicos de interesse (selecione pelo menos um):</legend>
+                <legend>Topicos de interesse (selecione pelo menos um): </legend>
                 <label>
                     <input type="checkbox" name="topicos" value="html"> HTML
                 </label>
